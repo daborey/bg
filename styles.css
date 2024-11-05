@@ -30,6 +30,39 @@ nav a {
     text-decoration: none;
 }
 
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px; /* Adjust the size of the hamburger icon */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide the navigation links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Position below the header */
+        left: 0;
+        right: 0;
+        background: #2196F3;
+        padding: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex; /* Show the navigation links when active */
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger icon */
+    }
+
+    .social-media a {
+        font-size: 28px; /* Adjust icon size for smaller screens */
+    }
+}
+
 section {
     padding: 60px 20px;
     text-align: center;
@@ -101,17 +134,3 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skill-set {
-        flex-direction: column;
-    }
-
-    .social-media a {
-        font-size: 28px; /* Adjusted icon size
